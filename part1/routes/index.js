@@ -21,6 +21,8 @@ router.get('/api/dogs', async (req, res, next) => {
       JOIN Users ON Dogs.owner_id = Users.user_id`;
 });
 
-router.get('api/walkrequests/open', async)
+router.get('api/walkrequests/open', async(req,res, next) => {
+
+});
 
 module.exports = router;
