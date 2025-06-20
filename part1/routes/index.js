@@ -15,10 +15,10 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/api/dogs', async (req, res, next) => {
-  const sql =
-      `SELECT Dogs.name, Dogs.size, Users.username AS owner_username
+  const sql =`
+      SELECT Dogs.name, Dogs.size, Users.username AS owner_username
       FROM Dogs
-      JOIN Users ON Dogs.owner_id = Users.user_id`
+      JOIN Users ON Dogs.owner_id = Users.user_id`;
 });
 
 module.exports = router;
