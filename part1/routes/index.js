@@ -6,8 +6,8 @@ const poolDog = mysql.creatPool({
   host: 'localHost',
   user: 'sqlUser',
   password: 'yeet',
-  database: 'WDC'
-})
+  database: 'WDCP1'
+});
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
