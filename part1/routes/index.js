@@ -15,7 +15,9 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/api/dogs', async (req, res, next) => {
-
+  try{
+    
+  }
 });
 
 module.exports = router;
