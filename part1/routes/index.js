@@ -1,13 +1,13 @@
 var express = require('express');
 var router = express.Router();
-const mysql = require('m')
+const mysql = require('mysql12/promise');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/api/dogs', function(req, res, next) {
+router.get('/api/dogs', async (req, res, next) {
 
 });
 
