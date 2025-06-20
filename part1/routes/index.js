@@ -14,7 +14,7 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-// add data to database ()
+// add data to database (MYSQL stuff)
 
 router.get('/api/dogs', async (req, res, next) => {
   const sql =`
