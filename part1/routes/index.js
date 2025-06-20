@@ -5,6 +5,7 @@ const mysql = require('mysql12/promise');
 const poolDog = mysql.creatPool({
   host: 'localHost',
   user: 'sqlUser',
+  password: 'yeet',
   
 })
 
