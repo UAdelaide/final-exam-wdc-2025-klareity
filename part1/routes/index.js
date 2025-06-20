@@ -14,6 +14,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
+// add data to database ()
+
 router.get('/api/dogs', async (req, res, next) => {
   const sql =`
       SELECT Dogs.name, Dogs.size, Users.username AS owner_username
@@ -28,5 +30,6 @@ router.get('api/walkrequests/open', async(req,res, next) => {
 router.get('api/walkers/summary', async(req, res, next) => {
   const sql = `FROM`;
 });
+
 
 module.exports = router;
