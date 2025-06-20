@@ -9,5 +9,16 @@
 <body>
     <h1>Express</h1>
     <p>Welcome to Express</p>
+
+    <script>
+    const { createApp } = Vue;
+    createApp({
+      data() {
+        return {
+          message: 'Welcome to the Dog Walking Service!'
+        };
+      }
+    }).mount('#app');
+  </script>
 </body>
 </html>
