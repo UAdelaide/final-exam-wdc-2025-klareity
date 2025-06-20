@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.get('/api/dogs', async (req, res, next) => {
-  
+  const sql
 });
 
 module.exports = router;
