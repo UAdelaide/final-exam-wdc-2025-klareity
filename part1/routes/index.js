@@ -49,7 +49,8 @@ router.get('/api/walkrequests/open', async(req,res, next) => {
 
 router.get('/api/walkers/summary', async(req, res, next) => {
   const sql = `
-    SELECT WalkRatings
+    SELECT
+      u.user_id, u.username
     `;
 });
 
