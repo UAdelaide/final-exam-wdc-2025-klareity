@@ -53,7 +53,7 @@ router.get('/api/walkers/summary', async(req, res, next) => {
       u.user_id, u.username,
       COUNT(DISTINCT wr.rating_id) AS total_ratings,
       AVG(wr.rating) AS average_rating,
-      
+      COUNT(DISTINCT wq.request_id) AS completed
     `;
 });
 
