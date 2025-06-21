@@ -25,7 +25,8 @@
       },
       methods:{
         async FetchDog(){
-
+          const response = await fetch('https://dog.ceo/api/breeds/image/random');
+          const data = await response.
         }
       }
     }).mount('#app');
