@@ -6,7 +6,7 @@ const poolDog = mysql.createPool({
   host: 'localHost',
   user: 'sqlUser',
   password: 'yeet',
-  database: 'WDCP1'
+  database: 'DogWalkingDB'
 });
 
 /* GET home page. */
