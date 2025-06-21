@@ -37,7 +37,7 @@ router.get('/me', (req, res) => {
   res.json(req.session.user);
 });
 
-// POST login (dummy version) but updated to 
+// POST login (dummy version) but updated
 router.post('/api/login', async (req, res) => {
   const { username, password } = req.body;
 
