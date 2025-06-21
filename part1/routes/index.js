@@ -33,14 +33,18 @@ router.get('/api/dogs', async (req, res, next) => {
 
 router.get('/api/walkrequests/open', async(req,res, next) => {
   const sql = `
-  SELECT WalkRequests.*, Users.username AS owner_username
-  FROM WalkRequests
-  JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
-  JOIN Users ON Dogs.owner_id = Users.user_id
-  WHERE WalkRequests.status = 'open'
-  `;
-
-  
+    SELECT WalkRequests.*, Users.username AS owner_username
+    FROM WalkRequests
+    JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+    JOIN Users ON Dogs.owner_id = Users.user_id
+    WHERE WalkRequests.status = 'open'
+    `;
+      try{
+        const [rows] = await poolDog.query(sql);
+        res.json(rows);
+      } catch (err){
+        next(err);
+      }
 });
 
 router.get('/api/walkers/summary', async(req, res, next) => {
