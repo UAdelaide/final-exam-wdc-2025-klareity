@@ -12,7 +12,7 @@
 
     <button type="button">Dog of the Day</button>
     <div v-if="DotDImage">
-      <img src="DotDImage" alt="Dog of the Day!" style="max-width: 400px">
+      <img :src="dogImage" alt="Random Dog" style="max-width: 400px; margin-top: 1em;">
     </div>
 
     <script>
