@@ -35,7 +35,7 @@ router.get('/api/walkrequests/open', async(req,res, next) => {
   const sql = `
   SELECT *
   FROM WalkRequests
-  
+  WHERE WalkRequests.status = 'open'
   `;
 });
 
