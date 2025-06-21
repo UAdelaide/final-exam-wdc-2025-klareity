@@ -25,8 +25,8 @@ router.get('/api/dogs', async (req, res, next) => {
       try{
         const [rows] = await poolDog.query(sql);
         res.json(rows);
-      } catch {
-        next(err)
+      } catch (err){
+        next(err);
       }
 });
 
