@@ -43,12 +43,13 @@ router.get('/api/walkrequests/open', async(req,res, next) => {
       const [rows] = await poolDog.query(sql);
       res.json(rows);
     } catch (err){
-        next(err);
-      }
+      next(err);
+    }
 });
 
 router.get('/api/walkers/summary', async(req, res, next) => {
-  const sql = `FROM`;
+  const sql = `
+    FROM`;
 });
 
 
