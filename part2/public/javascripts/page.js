@@ -161,7 +161,7 @@ function loadPosts() {
  * Increase the votes for a given post, then update the page
  */
 function upvote(index) {
-    posts[index].upvotes ++;
+    posts[index].upvotes++;
     updatePosts();
 }
 
@@ -169,7 +169,7 @@ function upvote(index) {
  * Decrease the votes for a given post, then update the page
  */
 function downvote(index) {
-    posts[index].upvotes --;
+    posts[index].upvotes--;
     updatePosts();
 }
 
