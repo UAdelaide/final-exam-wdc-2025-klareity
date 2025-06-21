@@ -35,8 +35,8 @@ router.get('/api/walkrequests/open', async(req,res, next) => {
   const sql = `
   SELECT WalkRequests.*, Users.username AS owner_username
   FROM WalkRequests
-  JOIN Users ON WalkRequests.dog_id = Dogs.dog_id
-  J
+  JOIN Dogs ON WalkRequests.dog_id = Dogs.dog_id
+  JOIN Users ON Dogs.owner_id = Users.
   WHERE WalkRequests.status = 'open'
   `;
 });
