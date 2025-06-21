@@ -132,7 +132,9 @@
       methods: {
         async Logout(){
           try{
-            const response = await fetch('/logout')
+            const response = await fetch('/logout',{
+              method: 'POST'
+            })
           } catch (err) {
 
           }
