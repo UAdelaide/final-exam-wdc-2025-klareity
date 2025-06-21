@@ -39,10 +39,10 @@ router.get('/api/walkrequests/open', async(req,res, next) => {
     JOIN Users ON Dogs.owner_id = Users.user_id
     WHERE WalkRequests.status = 'open'
     `;
-      try{
-        const [rows] = await poolDog.query(sql);
-        res.json(rows);
-      } catch (err){
+    try{
+      const [rows] = await poolDog.query(sql);
+      res.json(rows);
+    } catch (err){
         next(err);
       }
 });
