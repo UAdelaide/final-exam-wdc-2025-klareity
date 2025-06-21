@@ -60,7 +60,7 @@ router.get('/api/walkers/summary', async(req, res, next) => {
     WHERE u.role = 'walker'
     GROUP BY u.user_id, u.username
     `;
-      try{
+    try{
       const [rows] = await poolDog.query(sql);
       res.json(rows);
     } catch (err){
