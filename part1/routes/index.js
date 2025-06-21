@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 const mysql = require('mysql12/promise');
 
-const poolDog = mysql.creatPool({
+const poolDog = mysql.createPool({
   host: 'localHost',
   user: 'sqlUser',
   password: 'yeet',
@@ -23,11 +23,11 @@ router.get('/api/dogs', async (req, res, next) => {
       JOIN Users ON Dogs.owner_id = Users.user_id`;
 });
 
-router.get('api/walkrequests/open', async(req,res, next) => {
+router.get('/api/walkrequests/open', async(req,res, next) => {
   const sql = `FROM`;
 });
 
-router.get('api/walkers/summary', async(req, res, next) => {
+router.get('/api/walkers/summary', async(req, res, next) => {
   const sql = `FROM`;
 });
 
