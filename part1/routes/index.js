@@ -33,7 +33,8 @@ router.get('/api/dogs', async (req, res, next) => {
 
 router.get('/api/walkrequests/open', async(req,res, next) => {
   const sql = `
-  SELECT 
+  SELECT *
+  FROM WalkRe
   `;
 });
 
