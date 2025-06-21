@@ -1,6 +1,6 @@
 var express = require('express');
 var router = express.Router();
-const mysql = require('mysql12/promise');
+const mysql = require('mysql2/promise');
 
 const poolDog = mysql.createPool({
   host: 'localhost',
