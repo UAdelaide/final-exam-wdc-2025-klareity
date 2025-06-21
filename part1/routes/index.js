@@ -51,7 +51,7 @@ router.get('/api/walkers/summary', async(req, res, next) => {
   const sql = `
     SELECT
       u.user_id, u.username,
-      COUNT(DISTINCT wr.)
+      COUNT(DISTINCT wr.rating_id) AS total_ratings
     `;
 });
 
