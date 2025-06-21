@@ -20,7 +20,8 @@ router.get('/api/dogs', async (req, res, next) => {
   const sql =`
       SELECT Dogs.name, Dogs.size, Users.username AS owner_username
       FROM Dogs
-      JOIN Users ON Dogs.owner_id = Users.user_id`;
+      JOIN Users ON Dogs.owner_id = Users.user_id
+      `;
 
       try{
         const [rows] = await poolDog.query(sql);
@@ -31,7 +32,9 @@ router.get('/api/dogs', async (req, res, next) => {
 });
 
 router.get('/api/walkrequests/open', async(req,res, next) => {
-  const sql = `FROM`;
+  const sql = `
+  SELECT 
+  `;
 });
 
 router.get('/api/walkers/summary', async(req, res, next) => {
