@@ -23,7 +23,8 @@ router.get('/api/dogs', async (req, res, next) => {
       JOIN Users ON Dogs.owner_id = Users.user_id`;
 
       try{
-        const [rows] = await poolDog.query()
+        const [rows] = await poolDog.query(sql);
+        res.json(rows);
       }
 });
 
