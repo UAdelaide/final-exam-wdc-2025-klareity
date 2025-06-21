@@ -46,6 +46,7 @@
           try{
             const response = await fetch('/login' , {
               method: 'POST',
+              headers: { }
               body: JSON.stringify({ username: this.username, password: this.password })
             });
             const data = await response.json();
@@ -54,7 +55,7 @@
               if(data.role === 'owner'){
                 window.location.href = 'owner-dashboard.html';
               } else if (data.role === 'walker') {
-
+                window.location.href = 'walker-dashboard.html';
               } else {
                 this.loginError = 'Login Failed. Unknown User role.'
               }
