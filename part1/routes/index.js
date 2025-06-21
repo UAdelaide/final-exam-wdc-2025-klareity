@@ -21,6 +21,10 @@ router.get('/api/dogs', async (req, res, next) => {
       SELECT Dogs.name, Dogs.size, Users.username AS owner_username
       FROM Dogs
       JOIN Users ON Dogs.owner_id = Users.user_id`;
+
+      try{
+        const [rows] = 
+      }
 });
 
 router.get('/api/walkrequests/open', async(req,res, next) => {
