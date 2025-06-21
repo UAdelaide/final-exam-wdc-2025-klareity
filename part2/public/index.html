@@ -56,11 +56,11 @@
               } else if (data.role === 'walker') {
 
               } else {
-                this.loginError = 'Unknown User role.'
+                this.loginError = 'Login Failed. Unknown User role.'
               }
 
             } else {
-              this.loginError = data.error || 
+              this.loginError = data.error || 'Login Failed';
             }
           }
         }
