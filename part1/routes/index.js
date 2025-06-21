@@ -3,7 +3,7 @@ var router = express.Router();
 const mysql = require('mysql12/promise');
 
 const poolDog = mysql.createPool({
-  host: 'localHost',
+  host: 'localhost',
   user: 'sqlUser',
   password: 'yeet',
   database: 'DogWalkService'
